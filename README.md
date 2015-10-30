@@ -9,10 +9,10 @@ In order for a script to be included in the catalog, metadata
 describing it must be included in its file, like the below:
 
     /*** BEGIN META {
-      "name" : "Clear build queue",
+      "name" : "Whiskey in the Jar",
       "comment" : "print some cool <b>stuff</b>",
       "parameters" : [],
-      "core": "1.300",
+      "core": "1.600",
       "authors" : [
         { name : "..." }
       ]
