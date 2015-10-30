@@ -1,20 +1,25 @@
-/**
- * <pre>
- *  
- *  0.- Get the parameter "browser" and "browser_version" of current job
- *  1.- Get the parameter multibrowser of the childs jobs of the current job (a multiproject job)
- *  2.- For every child job with multibrowser==true: 
- *		- change values of  "webdriver.browser" and "webdriver.browser_version" with the respectives "browser" and "browser_version"
- *  
- *  
- *  </pre>
- */
+ /*** BEGIN META {
+  "name" : "change-child-job-label-by-browser-version",
+  "comment" : "<h3>For a multiproject job, change label for all child job with multibrowser==true</h3>
+  <ul>
+   <li>Get the parameter "browser" and "browser_version" of current job</li>
+   <li>Get the parameter multibrowser of the childs jobs of the current job (a multiproject job)</li>
+   <li>For every child job with multibrowser==true: 
+   	- change label
+ 	- change values of  "webdriver.browser" and "webdriver.browser_version" with the respectives "browser" and "browser_version"
+ </li></ul>",
+  "parameters" : [],
+  "core": "1.600",
+  "authors" : [
+    { name : "Sergio Sacristán" }
+  ]
+} END META**/
 import hudson.model.*
 import hudson.model.labels.*
 import com.tikal.jenkins.plugins.multijob.*
 
 ////////////////////////////////////////////////////////////
-///// Métodos //////////////////////////////////////////////
+///// Methods //////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 // Método para setear parámetros a un job
 def setJobParameter(job, key, value, desc) {
@@ -77,8 +82,8 @@ def changeBrowserl(job, label) {
 ////////////////////////////////////////////////////////////
 println " "
 println "change-child-job-label-by-browser-version START"  
-//Obtenermos valor de los par�metros
 
+// Getting build parameters
 def multibrowser="multibrowser"
 def multibrowser_value=true
 def browser ="browser"
