@@ -1,5 +1,5 @@
 /*** BEGIN META {
-  "name" : "change_project_svn",
+  "name" : "change-project-svn",
   "comment" : "
     <ul>
     	<li>url para trunk (SNANSHOT) https://.../svnArch/trunk/$test_project</li>
