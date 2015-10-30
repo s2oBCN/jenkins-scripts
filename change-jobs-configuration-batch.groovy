@@ -1,5 +1,5 @@
  /*** BEGIN META {
-  "name" : "change-child-job-label-by-browser-version",
+  "name" : "change-jobs-configuration-batch",
   "comment" : "<h3>Template to modify in batch mode jobs configuration</h3>
     <ul>
     	<li>1.- Get the matching jobs</li>
