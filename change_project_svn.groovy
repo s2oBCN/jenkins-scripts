@@ -1,17 +1,22 @@
-/**
-* Cambia la svn:url del proyecto  definido por la variable $svn_project
-*
-* url para trunk (SNANSHOT) https://172.18.252.137/svnArch/trunk/$test_project
-* url para versiones https://172.18.252.137/svnArch/tags/$buildVersion/$test_project
-*
-* Parámetros (con ejemplo):
-*				svnUrlBase=https://sfcap024.lacaixa.es/svnArch/
-*				test_project=automated-test/automated-test-demo -> proyecto de Jenkins donde nos conectaremos al SCM
-*				svn_build_project=demo-main -> nombre del módulo en el SCM
-*				svnRootFolder=branches, tags o trunk
-*				svnFolderType=fwkabs, prdabs o tagabs
-*/
-
+/*** BEGIN META {
+  "name" : "change_project_svn",
+  "comment" : "
+    <ul>
+    	<li>url para trunk (SNANSHOT) https://.../svnArch/trunk/$test_project</li>
+	<li>url para versiones https://.../svnArch/tags/$buildVersion/$test_project </li>
+  </li></ul>
+  Parámetros (con ejemplo):
+	svnUrlBase=https://.../svnArch/
+	test_project=automated-test/automated-test-demo -> proyecto de Jenkins donde nos conectaremos al SCM
+	svn_build_project=demo-main -> nombre del módulo en el SCM
+	svnRootFolder=branches, tags o trunk
+	svnFolderType=fwkabs, prdabs o tagabs",
+  "parameters" : [$svn_project],
+  "core": "1.600",
+  "authors" : [
+    { name : "Sergio Sacristán" }
+  ]
+} END META**/ 
 import hudson.*
 
 def SNAPSHOT_VERSION = "SNAPSHOT"
