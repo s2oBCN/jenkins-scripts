@@ -1,16 +1,19 @@
-/**
- * <pre>
- *  
- *  Template to modify in batch mode jobs configuration
- *  1.- Get the matching jobs
- *  2.- Process job changes 
- *
- * Additional functions:
- *		- setJobParameter -> add/modify an existing parameter
- *  	- ...
- *  
- *  </pre>
- */
+ /*** BEGIN META {
+  "name" : "change-child-job-label-by-browser-version",
+  "comment" : "<h3>Template to modify in batch mode jobs configuration</h3>
+    <ul>
+    	<li>1.- Get the matching jobs</li>
+	<li>2.- Process job changes </li>
+	<li>Additional functions:
+ 		- setJobParameter -> add/modify an existing parameter
+   	- ...
+  </li></ul>",
+  "parameters" : [],
+  "core": "1.600",
+  "authors" : [
+    { name : "Sergio Sacristán" }
+  ]
+} END META**/ 
 import hudson.model.*
 import hudson.model.labels.*
 import com.tikal.jenkins.plugins.multijob.*
