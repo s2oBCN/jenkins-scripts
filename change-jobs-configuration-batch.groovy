@@ -20,7 +20,7 @@ import com.tikal.jenkins.plugins.multijob.*
 
 
 ////////////////////////////////////////////////////////////
-///// Métodos //////////////////////////////////////////////
+///// Methods //////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 // Método para setear parámetros a un job
 def setJobParameter(job, key, value, desc) {
@@ -28,7 +28,7 @@ def setJobParameter(job, key, value, desc) {
   paramDef = job.getProperty(ParametersDefinitionProperty.class)
   if (paramDef == null) {
   	newArrList = new ArrayList<ParameterDefinition>(1)
-    newArrList.add(newParam)
+  	newArrList.add(newParam)
 	newParamDef = new ParametersDefinitionProperty(newArrList)
 	job.addProperty(newParamDef)
   } else {
