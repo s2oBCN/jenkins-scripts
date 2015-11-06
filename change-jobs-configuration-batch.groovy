@@ -52,11 +52,11 @@ def processJob(job) {
 }
 
 // 1.- Get the matching jobs
-def changeJobChildren(items) {
-  for (item in items) {    
+def changeJobChildren(jobsToChange) {
+  for (item in Hudson.instance.items) {    
     if (item.class.canonicalName != 'com.cloudbees.hudson.plugins.folder.Folder') {
 		println(item.name)
-      	if (item.name.contains("-cn-")){
+      	if (item.name.contains(jobsToChange)){
         	processJob(item)
       	}
     } else {
@@ -67,8 +67,11 @@ def changeJobChildren(items) {
 
 ////////////////////////////////////////////////////////////
 println " "
-println "changeJobChildren START"  
-changeJobChildren(Hudson.instance.items)
+  
+def jobsToChange="-cn-"
+
+println "changeJobChildren START to jobs that it's names contain:["+jobsToChange+"]"
+changeJobChildren(jobsToChange)
 
 println "changeJobChildren END."
 println " "
