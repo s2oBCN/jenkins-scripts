@@ -1,0 +1,5 @@
+def manager = org.jenkins.plugins.lockableresources.LockableResourcesManager.get()
+def resources = manager.getResources().findAll{ !it.locked}
+resources.each{
+	manager.getResources().remove(it)
+}
